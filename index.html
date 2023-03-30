@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Guess Number</title>
+</head>
+<style>
+    body{
+        font-family: 'Orbitron', sans-serif;
+    }
+    button{
+        font-size: 30px; 
+        margin-top: 30px; 
+        padding: 30px; 
+        border: 2px solid pink; 
+        border-radius: 3rem;
+        background-color: white;
+        transition: background-color 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: pink;
+    }
+    .results{
+        display: flex; flex-direction: column; align-items: center;
+        background-color: pink;
+        padding: 20px;
+        border-radius: 2rem;
+        color: white;
+        width: 300px;
+        margin: auto;
+        margin-top: 80px;
+    }
+</style>
+<body>
+    <h1 style="text-align: center;">Guess Number Game</h1>
+    <h2 style="text-align: center;">Find the number between 0 and 100</h2>
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; ">
+        <input id="guess" style="text-align: center;font-size: 30px;" type="number" placeholder="..Number Here..">
+        <button type="button" onclick="game()">Guess</button>
+        <button type="button" onclick="reset()">Reset</button>
+    </div>
+    <div class="results">
+        <h2 id="result"></h2>
+        <h2 id="make" style="text-align: center;"></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
